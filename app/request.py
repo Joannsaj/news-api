@@ -7,11 +7,11 @@ Source = source.Source
 api_key = app.config['NEWS_API_KEY']
 source_url = app.config["NEWS_SOURCE_API"]
 
-def get_sources():
+def get_sources(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_sources_url = source_url.format(api_key)
+    get_sources_url = source_url.format(category,api_key)
 
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
@@ -38,8 +38,8 @@ def process_results(source_list):
         language = source_item.get('language')
         country = source_item.get('country')
 
-        # if poster:
-        #     source_object = Source(id,name,description,url,category,language,country)
-        #     source_results.append(source_object)
+
+        source_object = Source(id,name,description,url,category,language,country)
+        source_results.append(source_object)
 
     return source_results

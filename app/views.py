@@ -12,7 +12,11 @@ def index():
     function that returns the index page and its data
     '''
     general_sources = get_sources('general')
-    print(general_sources)
+    sports_sources = get_sources('sports')
+    technology_sources = get_sources('technology')
+    science_sources = get_sources('science')
+    entertainment_sources = get_sources('entertainment')
+
     title = 'Home - Getting you upto date!'
-    return render_template('index.html', title = title,general = general_sources)
+    return render_template('index.html', title = title,general = general_sources,sports= sports_sources, technology =technology_sources, science=science_sources, entertainment=entertainment_sources)
 # general, sports,technology,science,entertainment

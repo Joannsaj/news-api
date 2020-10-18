@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+<!-- Content block -->
+{% block content %}
+{% for article in articles %}
+<li>{{ article.description}}</li>
+{% endfor %}
+{% endblock %}

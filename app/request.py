@@ -1,12 +1,14 @@
 from app import app
 import urllib.request,json
 from .models import source
+from .models import article
 
 Source = source.Source
+Article = article.Article
 
 api_key = app.config['NEWS_API_KEY']
 source_url = app.config["NEWS_SOURCE_API"]
-articles_url = app.config["NEWS_ARTICLE_API"]
+article_url = app.config["NEWS_ARTICLE_API"]
 
 def get_sources(category):
     '''

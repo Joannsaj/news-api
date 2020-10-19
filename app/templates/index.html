@@ -7,32 +7,16 @@
 {% endblock %}
 
 {%block content%}
-<h3> GENERAL</h3>
-<ul>
-    {{ macro.displaySourceList(general)}}
-</ul>
-<h3> SPORTS</h3>
-<ul>
-    {{ macro.displaySourceList(sports)}}
-</ul>
-<h3> ENTERTAINMENT</h3>
-<ul>
-    {{ macro.displaySourceList(entertainment)}}
-</ul>
-<h3> TECHNOLOGY</h3>
-<ul>
-    {{ macro.displaySourceList(technology)}}
-</ul>
-<h3> SCIENCE</h3>
-<ul>
-    {{ macro.displaySourceList(science)}}
-</ul>
-{%endblock%}
+<h3 class="text-center"> GENERAL</h3>
+{{ macro.displaySourceList(general)}}
+<h3 class="text-center"> SPORTS</h3>
+{{ macro.displaySourceList(sports)}}
+</div>
+<h3 class="text-center"> ENTERTAINMENT</h3>
+{{ macro.displaySourceList(entertainment)}}
+<h3 class="text-center"> TECHNOLOGY</h3>
+{{ macro.displaySourceList(technology)}}
+<h3 class="text-center"> SCIENCE</h3>
+{{ macro.displaySourceList(science)}}
 
-<!-- <div class="card bg-light mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Light card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div> -->
+{%endblock%}

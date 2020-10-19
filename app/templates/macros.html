@@ -1,8 +1,23 @@
+{% extends 'base.html'%}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/macros.css')}}">
+{% endblock %}
+
 {% macro displaySourceList(source_list) %}
 
 {% for source in source_list %}
-<li>{{ source.name}}</li>
-<a href="/articles/{{source.id}}">cliick</a>
+<div class="border border-dark">
+    <div class="card">
+        <div class="card-body">
+            <h3>{{ source.name}}</h3>
+            <p>{{source.description}}</p>
+            <a href="/articles/{{source.id}}">View articles</a>
+            <br>
+        </div>
+    </div>
+</div>
 {% endfor %}
 
 {% endmacro %}

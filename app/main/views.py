@@ -1,7 +1,7 @@
 from flask import render_template
 from . import main
-from .request import get_sources,get_articles
-from ..models import 
+from ..request import get_sources,get_articles
+# from ..models import Articles,Source
     # message = 'Hello World'
     # return render_template('index.html',massage = message)
 

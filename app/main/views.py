@@ -1,11 +1,11 @@
 from flask import render_template
-from app import app
+from . import main
 from .request import get_sources,get_articles
-
+from ..models import 
     # message = 'Hello World'
     # return render_template('index.html',massage = message)
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -21,7 +21,7 @@ def index():
     return render_template('index.html', title = title,general = general_sources,sports= sports_sources, technology =technology_sources, science=science_sources, entertainment=entertainment_sources)
 # general, sports,technology,science,entertainment
 
-@app.route('/articles/<source_id>')
+@main.route('/articles/<source_id>')
 def article(source_id):
     title = f'{source_id}'
     source_articles = get_articles(source_id)
